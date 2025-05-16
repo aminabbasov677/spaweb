@@ -14,7 +14,11 @@ export default function Timer() {
   };
 
   const reset = () => {
-    if (editing) setSeconds(0);
+    clearInterval(intervalRef.current);
+    setSeconds(0);
+    setRunning(false);
+    setEditing(true);
+    setPaused(false);
   };
 
   const start = () => {
@@ -64,7 +68,7 @@ export default function Timer() {
       <TimerControls onIncrease={increase} onReset={reset} disabled={!editing} />
       
       {!running && (
-        <button onClick={start} disabled={running}>
+        <button onClick={start} disabled={running || seconds === 0}>
           Başla
         </button>
       )}

@@ -4,14 +4,14 @@
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .screen h1 {
+}
+
+.screen h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
-  }
-  
-  .screen button {
+}
+
+.screen button {
     padding: 0.7rem 2rem;
     font-size: 1rem;
     background-color: #0077cc;
@@ -19,9 +19,13 @@
     border: none;
     border-radius: 6px;
     cursor: pointer;
-  }
-  
-  .screen button:hover {
+}
+
+.screen button:hover {
     background-color: #005fa3;
-  }
-  
+}
+
+.screen button:disabled {
+    background-color: #99c2e6;
+    cursor: not-allowed;
+}
